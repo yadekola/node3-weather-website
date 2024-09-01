@@ -43,9 +43,8 @@ weatherForm.addEventListener('submit', (e) => {
     // 3. Submit the form with a valid and invalid value to test
 
     messageOne.textContent = search.value
-    // messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
-    // messageTwo.textContent = ''
+
 
 
     fetch('/weather?address=' + location).then((response) => {
