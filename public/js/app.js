@@ -42,10 +42,10 @@ weatherForm.addEventListener('submit', (e) => {
     // 2. Use the search text as the addess query string value
     // 3. Submit the form with a valid and invalid value to test
 
-    // messageOne.textContent = search.value
-    messageOne.textContent = 'Loading...'
-    // messageTwo.textContent = ''
+    messageOne.textContent = search.value
+    // messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
+    // messageTwo.textContent = ''
 
 
     fetch('http://localhost:3333/weather?address=' + location).then((response) => {
