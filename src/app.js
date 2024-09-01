@@ -5,6 +5,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const application = express()
+const port = process.env.PORT || 3333
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -193,6 +194,6 @@ application.get('*', (req, res) => {
 //      - Help article not found.
 // 4. Test your work. Visit /what and /help/units
 
-application.listen(3333, () => {
-    console.log('Sever is up on port 3333.')
+application.listen(port, () => {
+    console.log('Sever is up on port ' + port)
 });
